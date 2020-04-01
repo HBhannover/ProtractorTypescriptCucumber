@@ -37,5 +37,9 @@ When('Benutzer klickt auf Button Anmelden', {timeout: 40*1000}, async()=> {
 })
 
 Then ("Benutzer landet sich in seinem Homepage", {timeout: 40*1000}, async()=>{
-   await browser.wait(EC.visibilityOf(element(by.id(elementID.mainContainerID))), 50000);
+    await browser.wait(EC.visibilityOf(element(by.id(elementID.mainContainerID))), 50000);
+})
+
+Then ("Anmeldung ist nicht erfolgreich", {timeout: 30*1000}, async ()=> {
+    await browser.wait(EC.visibilityOf(element(by.id(elementID.headerblock))), 50000);
 })
