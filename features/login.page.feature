@@ -4,7 +4,7 @@
     Scenario Outline: User login successful
     Given Anmeldungsseite wird angezeigt
     When Benutzer gibt Usename als <username> und Passwort als <passwort> ein
-    Then Benutzer landet sich in seinem Homepage
+    Then Benutzer ist jetzt in seinem Homepage
 
     Examples:
     | username | passwort |

@@ -36,6 +36,6 @@ When('Benutzer klickt auf Button Anmelden', {timeout: 40*1000}, async()=> {
     await commonsteps.clickElement(elementID.loginButton);
 })
 
-Then ("Benutzer landet sich in seinem Homepage", {timeout: 40*1000}, async()=>{
+Then ("Benutzer ist jetzt in seinem Homepage", {timeout: 40*1000}, async()=>{
    await browser.wait(EC.visibilityOf(element(by.id(elementID.mainContainerID))), 50000);
 })
