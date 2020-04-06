@@ -5,4 +5,5 @@ export class elementID {
     static readonly loginButton = 'loginbutton';
     static readonly mainContainerID = 'mainContainer';
     static readonly headerblock = 'header_block';
+    static readonly logoutDropDown = 'userNavigationLabel';
 }

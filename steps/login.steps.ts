@@ -13,6 +13,10 @@ Given('Anmeldungsseite wird angezeigt', {timeout:10*1000}, ()=>{
     Loginpage.getToUrl();
 })
 
+Given('Anmeldungsseite ist {string}', {timeout:10*1000}, async (string)=> {
+    browser.get('https://www.facebook.com/?stype=lo&jlou=Afc1ZgyhjxROxd4NVxvIh9OxujxYij8axSmiAtdL00fN2xPrakWz_v_kZ--WtpGjQobEKL_9dFz_bNXWeD3EZuRnABmI-8lOMptWPgucIh9WGw&smuh=57561&lh=Ac9E6TA0O091ty5x');
+} )
+
  When('Benutzer gibt Usename als {string} und Passwort als {string} ein', {timeout: 40*1000}, async(string1, string2)=> {
     await Loginpage.isDisplayed(elementID.emailField);
     await Loginpage.fillUsername(string1);
@@ -36,7 +40,7 @@ When('Benutzer klickt auf Button Anmelden', {timeout: 40*1000}, async()=> {
     await commonsteps.clickElement(elementID.loginButton);
 })
 
-Then ("Benutzer landet sich in seinem Homepage", {timeout: 40*1000}, async()=>{
+Then ("Benutzer ist jetzt in seinem Homepage", {timeout: 40*1000}, async()=>{
     await browser.wait(EC.visibilityOf(element(by.id(elementID.mainContainerID))), 50000);
 })
 
