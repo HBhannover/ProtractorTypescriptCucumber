@@ -15,7 +15,6 @@ static clickElement(elementTemp) {
 }
 
 static isVisible(elementClick) {
-    browser.wait(EC.visibilityOf(element(by.id(elementClick))));
+    browser.wait(EC.visibilityOf(element(by.id(elementClick))), 15000,"Element is not visible");
 }
-
 }
